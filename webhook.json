@@ -1,0 +1,40 @@
+[
+  {
+    "id": "grafana",
+    "execute-command": "/share/upload/grafana_alert.sh",
+    "command-working-directory": "/home/chen/cloud2",
+	"response-message": "Executing webhook test.sh...",
+    "pass-arguments-to-command":
+    [
+		{
+			"source": "payload",
+			"name": "title"
+		},
+		{
+			"source": "payload",
+			"name": "message"
+		},
+		{
+			"source": "payload",
+			"name": "ruleName"
+		}
+    ],
+
+	"pass-environment-to-command": [
+		{
+			"envname": "title",
+			"source": "payload",
+			"name": "title"
+		}
+	],
+	"pass-file-to-command":[
+		{
+			"source": "entire-payload",
+			"envname": "fname",
+			"base64decode": false
+		}
+	],
+	"include-command-output-in-response": true
+  }
+]
+
