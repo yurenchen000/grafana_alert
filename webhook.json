@@ -1,9 +1,9 @@
 [
   {
     "id": "grafana",
-    "execute-command": "/share/upload/grafana_alert.sh",
-    "command-working-directory": "/home/chen/cloud2",
-	"response-message": "Executing webhook test.sh...",
+	"execute-command": "/home/hao.chen/wdir/webhook/grafana_alert.sh",
+	"command-working-directory": "/home/hao.chen/wdir/webhook",
+	"response-message": "Executing webhook alert.sh...",
     "pass-arguments-to-command":
     [
 		{
@@ -18,7 +18,7 @@
 			"source": "payload",
 			"name": "ruleName"
 		}
-    ],
+	],
 
 	"pass-environment-to-command": [
 		{
