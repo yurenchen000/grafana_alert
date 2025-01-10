@@ -1,40 +1,40 @@
 [
   {
     "id": "grafana",
-	"execute-command": "/home/hao.chen/wdir/webhook/grafana_alert.sh",
-	"command-working-directory": "/home/hao.chen/wdir/webhook",
-	"response-message": "Executing webhook alert.sh...",
+    "execute-command": "/home/hao.chen/wdir/webhook/grafana_alert.sh",
+    "command-working-directory": "/home/hao.chen/wdir/webhook",
+    "response-message": "Executing webhook alert.sh...",
     "pass-arguments-to-command":
     [
-		{
-			"source": "payload",
-			"name": "title"
-		},
-		{
-			"source": "payload",
-			"name": "message"
-		},
-		{
-			"source": "payload",
-			"name": "ruleName"
-		}
-	],
+        {
+            "source": "payload",
+            "name": "title"
+        },
+        {
+            "source": "payload",
+            "name": "message"
+        },
+        {
+            "source": "payload",
+            "name": "ruleName"
+        }
+    ],
 
-	"pass-environment-to-command": [
-		{
-			"envname": "title",
-			"source": "payload",
-			"name": "title"
-		}
-	],
-	"pass-file-to-command":[
-		{
-			"source": "entire-payload",
-			"envname": "fname",
-			"base64decode": false
-		}
-	],
-	"include-command-output-in-response": true
+    "pass-environment-to-command": [
+        {
+            "envname": "title",
+            "source": "payload",
+            "name": "title"
+        }
+    ],
+    "pass-file-to-command":[
+        {
+            "source": "entire-payload",
+            "envname": "fname",
+            "base64decode": false
+        }
+    ],
+    "include-command-output-in-response": true
   }
 ]
 
