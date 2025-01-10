@@ -23,6 +23,61 @@
         "envname": "title",
         "source": "payload",
         "name": "title"
+      },
+      {
+        "envname": "status0",
+        "source": "payload",
+        "name": "status"
+      },
+      {
+        "envname": "state",
+        "source": "payload",
+        "name": "state"
+      },
+      {
+        "envname": "status",
+        "source": "payload",
+        "name": "alerts[].status"
+      },
+      {
+        "envname": "alertname",
+        "source": "payload",
+        "name": "alerts[].labels.alertname"
+      },
+      {
+        "envname": "summary",
+        "source": "payload",
+        "name": "alerts[].annotations.summary"
+      },
+      {
+        "envname": "grafana_folder",
+        "source": "payload",
+        "name": "alerts[].labels.grafana_folder"
+      },
+      {
+        "envname": "job",
+        "source": "payload",
+        "name": "alerts[].labels.job"
+      },
+      {
+        "envname": "instance",
+        "source": "payload",
+        "name": "alerts[].labels.instance"
+      },
+      {
+        "envname": "generatorURL",
+        "source": "payload",
+        "name": "alerts[].generatorURL"
+      },
+      {
+        "envname": "dashboardURL",
+        "source": "payload",
+        "name": "alerts[].dashboardURL"
+      },
+      {
+        "envname": "values",
+        "source": "payload",
+        "name": "alerts[].values"
       }
     ],
     "pass-file-to-command": [
