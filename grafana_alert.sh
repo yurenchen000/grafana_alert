@@ -19,6 +19,7 @@ title="$1"
 msg="$2"
 name="$3"
 txt="`cat $fname`"
+cp -pv "$fname" "payload.`date +'%F_%T'`"
 
 msg="${msg//localhost:/jk4:}"
 
@@ -48,7 +49,23 @@ $msg
 # $txt
 # $qqq
 
-echo "=== `date -Is`: $title -- $body" >> grafana_alert.out
+tit="$status| $alertname |$job"
+bod="
+$summary
+$instance 
+$values
 
-push_msg "$title" "$body"
+rule: $generatorURL
+
+board: $dashboardURL
+"
+
+# echo "=== `date -Is`: $title -- $body" >> grafana_alert.out
+echo "=== `date -Is`: $tit -- $bod" >> grafana_alert.out
+echo "--msg: $msg"$'\n\n'"txt: $txt"$'\n\n' >> grafana_alert.out
+
+## note: app recv format wrong: lost newline, wrong html,wrong markdown
+# push_msg "$title" "$body"
+push_msg "$tit" "$bod" >> grafana_alert.out
+
 
