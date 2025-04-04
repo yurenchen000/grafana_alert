@@ -20,6 +20,7 @@ msg="$2"
 name="$3"
 txt="`cat $fname`"
 cp -pv "$fname" "payload.`date +'%F_%T'`"
+# env | grep '^[a-z]' > "env.`date +'%F_%T'`"
 
 msg="${msg//localhost:/jk4:}"
 
@@ -64,6 +65,7 @@ board: $dashboardURL
 echo "=== `date -Is`: $tit -- $bod" >> grafana_alert.out
 echo "--msg: $msg"$'\n\n'"txt: $txt"$'\n\n' >> grafana_alert.out
 
+env | grep '^[a-z]' >> grafana_alert.out
 ## note: app recv format wrong: lost newline, wrong html,wrong markdown
 # push_msg "$title" "$body"
 push_msg "$tit" "$bod" >> grafana_alert.out
