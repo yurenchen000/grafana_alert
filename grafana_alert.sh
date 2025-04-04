@@ -50,7 +50,7 @@ $msg
 # $txt
 # $qqq
 
-tit="$status| $alertname |$job"
+tit="$status | $alertname |$job"
 bod="
 $summary
 $instance 
