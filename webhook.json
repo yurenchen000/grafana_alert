@@ -37,47 +37,47 @@
       {
         "envname": "status",
         "source": "payload",
-        "name": "alerts[].status"
+        "name": "alerts.0.status"
       },
       {
         "envname": "alertname",
         "source": "payload",
-        "name": "alerts[].labels.alertname"
+        "name": "alerts.0.labels.alertname"
       },
       {
         "envname": "summary",
         "source": "payload",
-        "name": "alerts[].annotations.summary"
+        "name": "alerts.0.annotations.summary"
       },
       {
         "envname": "grafana_folder",
         "source": "payload",
-        "name": "alerts[].labels.grafana_folder"
+        "name": "alerts.0.labels.grafana_folder"
       },
       {
         "envname": "job",
         "source": "payload",
-        "name": "alerts[].labels.job"
+        "name": "alerts.0.labels.job"
       },
       {
         "envname": "instance",
         "source": "payload",
-        "name": "alerts[].labels.instance"
+        "name": "alerts.0.labels.instance"
       },
       {
         "envname": "generatorURL",
         "source": "payload",
-        "name": "alerts[].generatorURL"
+        "name": "alerts.0.generatorURL"
       },
       {
         "envname": "dashboardURL",
         "source": "payload",
-        "name": "alerts[].dashboardURL"
+        "name": "alerts.0.dashboardURL"
       },
       {
         "envname": "values",
         "source": "payload",
-        "name": "alerts[].values"
+        "name": "alerts.0.values"
       }
     ],
     "pass-file-to-command": [
