@@ -17,6 +17,8 @@ cat payload.test | jq '.alerts[0].status'
 should write as 'alerts.0.status'
 
 
+https://github.com/adnanh/webhook/issues/726
+
 ## reload
 
 kill  -USR1
