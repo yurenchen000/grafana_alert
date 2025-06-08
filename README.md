@@ -47,3 +47,9 @@ kill  -USR1 PID_OF_WEBHOOK
 pkill -USR1 -ef ./webhook
 ```
 
+<br>
+
+## Other Bash Script
+
+[![other bash repos](https://res.ez2.fun/svg/repos-bash_script.svg)](https://github.com/yurenchen000/yurenchen000/blob/main/repos.md#bash-scripts)
+
